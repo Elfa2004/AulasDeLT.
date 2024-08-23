@@ -104,35 +104,67 @@
         button:active { /* Quando o mouse estiver com o botão clicado */
             border-radius: 50px;
         }
+              
 
-        #container {
+        #container1 {
             display: flex; /* Transformamos em container */
-            justify-content: last baseline; /*
+            justify-content: space-evenly; /*
                                                 flex-start - Alinha no inicio
-                                                flex-end - Alinha
+                                                flex-end - Alinha no final
+                                                center - Alinhamento Centralizado
+                                                space-between - espaçamento entre os itens, sem espaços na estremidades.
+                                                space-aroud - Espaçamento entre os itens, com espaços nas estreminades.
+                                                space-evenly - cria espaçamentos igual entre os itens, só que o espaçamento entre os itens final e inicial são
+                                                iguais.
 
 
                                             */
-
+            flex-direction: column; /* "flex-direction:  ;" informa a direção do eixo principal. 
+                                        row - horizontal - Padrão/Defaul.
+                                        column - Vertical.
+            */
+            /*align-items: center; Alinha os itens na direção - as mesmas aplicação do "justify-content: ;" podem ser aplicada em "align-items: ;" 
+                                 
+             */
             width: 500px;
             height: 500px;
             border: 2px solid black;
             background-color: green;
         }
+        #container2 {   
+            display: flex;
+            flex-direction: space-evenly;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            background-color: green;
+
+        }   
+
+        #container3 {   
+            display: flex;
+            flex-direction: row;
+
+        }      
         #item1 {
             width: 60px;
             height: 60px;
             background-color: blue;
         }
-        #item2 {
-            width: 60px;
-            height: 60px;
-            background-color: purple;
-        }
+    
         #item3 {
             width: 60px;
             height: 60px;
             background-color: yellow;
+        
+        
+        }
+        #item2 {
+            width: 60px;
+            height: 60px;
+            background-color: purple;
         }
         #item4 {
             width: 60px;
@@ -268,13 +300,19 @@
         <button id="botao1" type="submit">Enviar</button>
         <button id="botao2" type="reset">Limpar</button>
     </form>
-    <div id="container">
+<div id ="container1">
+
+     <div id="container2">
+        <img width="60px" height="60px" src="bb.jpg">
+     </div>
+    <div id="container3">
         <div id="item1">item 1</div>
         <div id="item2">item 2</div>
         <div id="item3">item 3</div>
         <div id="item4">item 4</div>
         <div id="item5">item 5</div>
-        <
+        
     </div>
+</div>
 </body>
 </html>
