@@ -1,0 +1,14 @@
+/*ANOTÇÃO*/
+#mario{
+    position: absolute; /*" postion: absolute; " em relação aos cantos do container que o elemento
+    se encontra.
+    "position:relative" em relação a sua posição de origem. */
+    left: 30px;
+    top: 550px;
+    background-color: red;
+    border: 3px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+ 

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            seletor - Indica onde aplicar o estilo
+            propriedade - qualquer característica visual, por exemplo, cor de fundo
+            valor - o valor da propriedade, por exemplo, azul
+
+            seletor {
+                propriedade1: valor1;
+                propriedade2: valor2;
+                ...
+                propriedaden: valorn;
+                exemplo:
+                background-color: blue;
+            }
+
+            seletor2 {
+                propriedade1: valor1;
+                propriedade2: valor2;
+                ...
+                propriedaden: valorn;
+            }
+            
+            tipos de seletores
+             - Universal *
+             Exemplo:
+             * {
+                font-family: roboto;
+                font-size: 30;
+             }
+        */
+        * { /* Seletor universal */
+            font-family: roboto;
+            color: black;
+        }
+
+        form { /* Seletor de tag */
+            
+            background-color:#2F4F4F;
+            width: 450px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px black;
+        }
+
+        input, select {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px solid white;
+        }
+
+        textarea {
+            background-color: #5F9EA0;
+        }
+
+        option {
+            color: black;
+        }
+
+        .titulo { /* Seletor de classe - para o grupo de elementos que tem essa classe */
+            color:#F0E68C;
+        }
+
+        button {
+            border: 0;
+            padding: 5px;
+            border-radius: 10px 0px 10px 0px;
+        }
+
+        #botao1 { /* Seletor individual - apenas para um elemento */
+            background-color: #B8860B;
+        }
+
+        #botao1:hover { /* Se o mouse estiver por cima do componente que tem o id botao1 */
+            position: relative;
+            top: 10px;
+            background-color: black;
+            color: white;
+            transition: 2s all;
+        }
+
+        td:hover { /* Se o mouse estiver por cima de qualquer td */
+            background-color: green;
+            box-shadow: 10px 10px 10px black;
+            transition: 2s all;
+        }
+
+        #botao2 {
+            background-color: #556B2F;
+        }
+
+        input:focus { /* Quando o componente está selecionado */
+            border-radius: 50px;
+            border: 5px;
+            background-color: pink;
+        }
+
+        button:active { /* Quando o mouse estiver com o botão clicado */
+            border-radius: 50px;
+        }
+              
+
+        #container1 {
+            display: flex; /* Transformamos em container */
+            justify-content: space-evenly; /*
+                                                flex-start - Alinha no inicio
+                                                flex-end - Alinha no final
+                                                center - Alinhamento Centralizado
+                                                space-between - espaçamento entre os itens, sem espaços na estremidades.
+                                                space-aroud - Espaçamento entre os itens, com espaços nas estreminades.
+                                                space-evenly - cria espaçamentos igual entre os itens, só que o espaçamento entre os itens final e inicial são
+                                                iguais.
+
+
+                                            */
+            flex-direction: column; /* "flex-direction:  ;" informa a direção do eixo principal. 
+                                        row - horizontal - Padrão/Defaul.
+                                        column - Vertical.
+            */
+            /*align-items: center; Alinha os itens na direção - as mesmas aplicação do "justify-content: ;" podem ser aplicada em "align-items: ;" 
+                                 
+             */
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            background-color: green;
+        }
+        #container2 {   
+            display: flex;
+            flex-direction: space-evenly;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            background-color: green;
+
+        }   
+
+        #container3 {   
+            display: flex;
+            flex-direction: row;
+
+        }      
+        #item1 {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+        }
+    
+        #item3 {
+            width: 60px;
+            height: 60px;
+            background-color: yellow;
+        
+        
+        }
+        #item2 {
+            width: 60px;
+            height: 60px;
+            background-color: purple;
+        }
+        #item4 {
+            width: 60px;
+            height: 60px;
+            background-color: red;
+        }
+        #item5 {
+            width: 60px;
+            height: 60px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        Essa é a <b>primeira</b> linha do parágrafo. Bla, Bla, Bla, Bla...</br>
+        Essa é a <i>segunda</i> linha do parágrafo. Bla, Bla, Bla, Bla...</br>
+        Essa é a <u>terceira</u> linha do parágrafo. Bla, Bla, Bla, Bla...</br>
+        Essa é a <b><i>quarta</i></b> linha do parágrafo. Bla, Bla, Bla, Bla...</br>
+        Essa é a <u><b><i>quinta</i></b></u> linha do parágrafo. Bla, Bla, Bla, Bla...</br>
+    </p>
+    <figure>
+        <img src="https://sempreupdate.com.br/wp-content/uploads/2023/07/distribuicoes-linux-pc-antigo-420x280.jpeg" />
+        <figcaption>Figura 1<sup>a</sup>. Computador da década de 90.</figcaption>
+        <img src="arquivo.avif" width="600" height="400" />
+        <figcaption>Figura 1<sup>b</sup>. Computador da década de 80.</figcaption>
+        <figcaption>Figura 1. Computadores antigos.</figcaption>
+    </figure>
+    <a href="http://www.google.com.br">
+        <img src="botao.jpg" /><br/>
+    </a>
+    <video controls autoplay>
+        <source src="video.mp4" />
+    </video>
+    <iframe width="935" height="526" src="https://www.youtube.com/embed/zsJgO1yOGDY" title="A Totally Normal SE/30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <table border = 1 cellspacing = 0 cellpadding = 10>
+        <tr>
+            <th colspan = 3>Media final dos alunos na primeira unidade</th>
+        </tr>
+        <tr>
+            <th rowspan="5">Banco de dados</th>
+            <th>Aluno</th>
+            <th>Média</th>
+        </tr>
+        <tr>
+            <td>João Paulo</td>
+            <td>8,0</td>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>9,0</td>
+        </tr>
+        <tr>
+            <td>José Batista</td>
+            <td>6,5</td>
+        </tr>
+        <tr>
+            <td>Antônio Valmir</td>
+            <td>8,0</td>
+        </tr>
+        <tr>
+            <th rowspan="5">Linguagem e Técnicas</th>
+            <th>Aluno</th>
+            <th>Média</th>
+        </tr>
+        <tr>
+            <td>João Paulo</td>
+            <td>8,0</td>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>9,0</td>
+        </tr>
+        <tr>
+            <td>José Batista</td>
+            <td>6,5</td>
+        </tr>
+        <tr>
+            <td>Antônio Valmir</td>
+            <td>8,0</td>
+        </tr>
+        <tr>
+            <th rowspan="5">Redes de computadores I</th>
+            <th>Aluno</th>
+            <th>Média</th>
+        </tr>
+        <tr>
+            <td>João Paulo</td>
+            <td>8,0</td>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>9,0</td>
+        </tr>
+        <tr>
+            <td>José Batista</td>
+            <td>6,5</td>
+        </tr>
+        <tr>
+            <td>Antônio Valmir</td>
+            <td>8,0</td>
+        </tr>
+    </table>
+    <form>
+        <label class="titulo">Nome</label><br/>
+        <input required placeholder="Informe seu nome completo" type="text" size="60"/><br/><br/>
+        <label class="titulo">Data de nascimento</label><br/>
+        <input required type="date" /><br/><br/>
+        <label class="titulo">Idade</label><br/>
+        <input required placeholder="Informe sua idade" type="number" /><br/><br/>
+        <label class="titulo">Gênero</label><br/>
+        <input type="radio" name="sexo" /><label>Masculino</label><br/>
+        <input type="radio" name="sexo" /><label>Feminino</label><br/>
+        <input type="radio" name="sexo" /><label>Outros</label><br/><br/>
+        <label class="titulo">Interesses</label><br/>
+        <input type="checkbox" name="esporte" /><label>Esporte</label><br/>
+        <input type="checkbox" name="politica" /><label>Politica</label><br/>
+        <input type="checkbox" name="filmes" /><label>Filmes</label><br/>
+        <input type="checkbox" name="teatro" /><label>Teatro</label><br/>
+        <input type="checkbox" name="acadamia" /><label>Academia</label><br/><br/>
+        <label class="titulo">Cidade</label><br/>
+        <select>
+            <option>-- Selecione uma cidade --</option>
+            <option>Salvador</option>
+            <option>Santo Amaro</option>
+            <option>Feira de Santana</option>
+            <option>Senhor do Bonfim</option>
+            <option>Juazeiro</option>
+        </select><br/><br/>
+        <label class="titulo">Endereço</label><br/>
+        <textarea cols="60" rows="5"></textarea><br/><br/>
+        <button id="botao1" type="submit">Enviar</button>
+        <button id="botao2" type="reset">Limpar</button>
+    </form>
+<div id ="container1">
+
+     <div id="container2">
+        <img width="60px" height="60px" src="bb.jpg">
+     </div>
+    <div id="container3">
+        <div id="item1">item 1</div>
+        <div id="item2">item 2</div>
+        <div id="item3">item 3</div>
+        <div id="item4">item 4</div>
+        <div id="item5">item 5</div>
+        
+    </div>
+</div>
+</body>
+</html>
